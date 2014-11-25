@@ -38,9 +38,10 @@ modules="$build/modules"
 precomp="$build/precomp"
 
 rm -rfd "$oldbuild" 2> /dev/null
-mv "$build" "$build.old"
+mv "$build" "$oldbuild"
 mkdir -p "$build"
 mv "$oldbuild/modules" "$build/" 2> /dev/null
+rm -rfd "$oldbuild" 2> /dev/null
 
 config="Debug"
 
@@ -71,10 +72,11 @@ cleanbuild()
 
 cleanoutput()
 {
-    logdir="$build/logs/$2-$1"
+    logdir="$build/logs"
     mkdir -p "$logdir"
-    testout="$logdir/out.log"
-    testerr="$logdir/err.log"
+    logfile="$logdir/$1-$2"
+    testout="$logfile.log"
+    testerr="$logfile-errors.log"
 
     # make empty output files
     echo "" > "$testout"
