@@ -23,7 +23,8 @@ fi
 
 echo "Preparing to build $project"
 
-build="$PWD/test-build"
+buildname="build"
+build="$PWD/$buildname"
 oldbuild="$build.old"
 
 pushd "$ecbase" > /dev/null
@@ -128,7 +129,7 @@ commonbuildxctool()
         echo "xxctool returned $result"
 
         echo "Build failed for scheme $1"
-        urlencode "${JOB_URL}ws/test-build/logs/$1-$3"
+        urlencode "${JOB_URL}/$buildname/logs/$1-$3"
         echo "Full log: $encoded"
 
         exit $result
@@ -170,7 +171,7 @@ commonbuildxcbuild()
           echo "Found failure in log: $buildfailures"
         fi
         echo "Build failed for scheme $SCHEME"
-        urlencode "${JOB_URL}ws/test-build/logs/$SCHEME-$PLATFORM"
+        urlencode "${JOB_URL}/$buildname/logs/$SCHEME-$PLATFORM"
         echo "Full log: $encoded"
         if [[ $result == 0 ]]; then
             result=1
