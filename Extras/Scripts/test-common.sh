@@ -31,16 +31,18 @@ wd=`pwd`
 ocunit2junit="$wd/ocunit2junit/bin/ocunit2junit"
 popd > /dev/null
 
-sym="$build/sym"
-obj="$build/obj"
-dst="$build/dst"
-modules="$build/modules"
-precomp="$build/precomp"
+derived="derived"
+sym="$build/built"
+obj="$build/$derived/objects"
+dst="$build/$derived/dst"
+precomp="$build/$derived/precompiled-headers"
+modulespath=$"$derived/modules"
+modules="$build/$modulespath"
 
 rm -rfd "$oldbuild" 2> /dev/null
 mv "$build" "$oldbuild"
-mkdir -p "$build"
-mv "$oldbuild/modules" "$build/" 2> /dev/null
+mkdir -p "$build/$modulespath"
+mv "$oldbuild/$modulespath" "$build/$derived/" 2> /dev/null
 rm -rfd "$oldbuild" 2> /dev/null
 
 config="Debug"
@@ -54,7 +56,7 @@ report()
 {
     pushd "$build" > /dev/null 2>> "$testerr"
     "$ocunit2junit" < "$testout" > /dev/null 2>> "$testerr"
-    reportdir="$build/reports/$2-$1"
+    reportdir="$build/reports/$1 ($2)"
     mkdir -p "$reportdir"
     mv test-reports/* "$reportdir" 2>> "$testerr"
     rmdir test-reports 2>> "$testerr"
@@ -109,10 +111,10 @@ commonbuildxctool()
 
     setup "xctool" "$SCHEME" "$PLATFORM" "$@"
 
-    reportdir="$build/reports/$PLATFORM-$SCHEME"
+    reportdir="$build/reports"
     mkdir -p "$reportdir"
 
-    xctool -workspace "$project.xcworkspace" -scheme "$SCHEME" -sdk "$PLATFORM" "$@" OBJROOT="$obj" SYMROOT="$sym" DSTROOT="$dst" SHARED_PRECOMPS_DIR="$precomp" MODULE_CACHE_DIR="$modules" -reporter "junit:$reportdir/report.xml" -reporter "pretty:$testout" 2>> "$testerr"
+    xctool -workspace "$project.xcworkspace" -scheme "$SCHEME" -sdk "$PLATFORM" "$@" OBJROOT="$obj" SYMROOT="$sym" DSTROOT="$dst" SHARED_PRECOMPS_DIR="$precomp" MODULE_CACHE_DIR="$modules" -reporter "junit:$reportdir/$SCHEME-$PLATFORM-report.xml" -reporter "pretty:$testout" 2>> "$testerr"
     result=$?
 
     if [[ $result != 0 ]]
