@@ -40,10 +40,15 @@ precomp="$build/$derived/precompiled-headers"
 modulespath=$"$derived/modules"
 modules="$build/$modulespath"
 
+preserve_module_cache=false
+
 rm -rfd "$oldbuild" 2> /dev/null
 mv "$build" "$oldbuild"
 mkdir -p "$build/$modulespath"
-mv "$oldbuild/$modulespath" "$build/$derived/" 2> /dev/null
+if $preserve_module_cache
+then
+    mv "$oldbuild/$modulespath" "$build/$derived/" 2> /dev/null
+fi
 rm -rfd "$oldbuild" 2> /dev/null
 
 config="Debug"
