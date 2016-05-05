@@ -1256,7 +1256,6 @@
 				2274B38814F56896003B8A0B /* Sources */,
 				2274B38914F56896003B8A0B /* Frameworks */,
 				2274B38A14F56896003B8A0B /* Resources */,
-				2274B38B14F56896003B8A0B /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -1490,20 +1489,6 @@
 			showEnvVarsInLog = 0;
 		};
 		226889E31AEE4B49005510E5 /* ShellScript */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "# Run the unit tests in this test bundle.\n\"${SYSTEM_DEVELOPER_DIR}/Tools/RunUnitTests\"\n";
-			showEnvVarsInLog = 0;
-		};
-		2274B38B14F56896003B8A0B /* ShellScript */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
