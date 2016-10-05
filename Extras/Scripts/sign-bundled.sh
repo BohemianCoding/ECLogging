@@ -73,6 +73,12 @@ sign()
         echo "(old identifier was $CURRENT_IDENTIFIER, old authority was $CURRENT_AUTHORITY)"
     fi
     SIGN_OUTPUT=$(codesign --verbose=2 --deep --force --identifier ${BUNDLEID} $OTHER_CODE_SIGN_FLAGS --sign "${CODE_SIGN_IDENTITY}" "${FILE}" 2>&1)
+    if [[ $? != 0 ]]
+    then
+        echo "Failed to resign $NAME"
+        echo "$SIGN_OUTPUT"
+        exit $?
+    fi
     verbose "$SIGN_OUTPUT"
   else
     verbose "Didn't need to sign $NAME - already signed correctly as $CURRENT_IDENTIFIER $CURRENT_AUTHORITY"
