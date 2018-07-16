@@ -130,6 +130,8 @@
 
 - (void)disable;
 
+- (instancetype)init NS_UNAVAILABLE;
+- (instancetype)new NS_UNAVAILABLE;
 
 /**
  Set up a channel with a given name.

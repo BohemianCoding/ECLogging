@@ -13,6 +13,9 @@
 + (ECASLClient*)sharedInstance;
 - (instancetype)initWithName:(NSString*)name NS_DESIGNATED_INITIALIZER;
 
+- (instancetype)init NS_UNAVAILABLE;
+- (instancetype)new NS_UNAVAILABLE;
+
 - (void)logAtLevel:(int)level withFormat:(NSString*)format, ... NS_FORMAT_FUNCTION(2, 3);
 - (void)log:(NSString*)format, ... NS_FORMAT_FUNCTION(1, 2);
 - (void)error:(NSString*)format, ... NS_FORMAT_FUNCTION(1, 2);
