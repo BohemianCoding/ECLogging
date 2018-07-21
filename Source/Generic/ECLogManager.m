@@ -37,7 +37,6 @@ static NSString* const LogSettingsFile = @"ECLogging";
 static NSString* const ChannelsKey = @"Channels";
 static NSString* const ForceDebugMenuKey = @"ECLoggingMenu";
 static NSString* const HandlersKey = @"Handlers";
-static NSString* const InstallDebugMenuKey = @"InstallMenu";
 static NSString* const LogManagerSettingsKey = @"ECLogging";
 static NSString* const OptionsKey = @"Options";
 static NSString* const ResetSettingsKey = @"ECLoggingReset";
@@ -78,8 +77,7 @@ static ECLogManager* gSharedInstance = nil;
 //! Initialise the log manager.
 // --------------------------------------------------------------------------
 
-- (instancetype)init
-{
+- (instancetype)init {
 	self = [super init];
 	if (self) {
 		[self startup];
@@ -110,23 +108,16 @@ static ECLogManager* gSharedInstance = nil;
 }
 
 - (void)shutdown {
-	id<ECLogManagerDelegate> delegate = self.delegate;
-	if ([delegate respondsToSelector:@selector(logManagerWillShutdown:)])
-		[delegate logManagerWillShutdown:self];
-
 	self.settings = nil;
-
 }
 
 - (void)finishStartup {
 	[self notifyDelegateOfStartup];
 }
 
-- (void)notifyDelegateOfStartup
-{
+- (void)notifyDelegateOfStartup {
 	id<ECLogManagerDelegate> delegate = self.delegate;
-	if ([delegate respondsToSelector:@selector(logManagerDidStartup:)])
-	{
+	if ([delegate respondsToSelector:@selector(logManagerDidStartup:)]) {
 		[delegate logManagerDidStartup:self];
 	}
 }
@@ -148,87 +139,40 @@ static ECLogManager* gSharedInstance = nil;
 	return _defaultSettings;
 }
 
-- (NSUInteger)expectedSettingsVersionWithDefaultSettings:(NSDictionary*)defaultSettings
-{
-	NSUInteger expectedVersion = [defaultSettings[VersionKey] unsignedIntegerValue];
-	if (expectedVersion == 0)
-		expectedVersion = kSettingsVersion;
-
-	return expectedVersion;
-}
-
 // --------------------------------------------------------------------------
 //! Load saved channel details.
 //! We make and register any channel found in the settings.
 // --------------------------------------------------------------------------
 
-- (void)loadSettings
-{
-
-	NSUserDefaults* userSettings = [NSUserDefaults standardUserDefaults];
+- (void)loadSettings {
+	NSUserDefaults *userSettings = [NSUserDefaults standardUserDefaults];
 	BOOL skipSavedSettings = [userSettings boolForKey:ResetSettingsKey];
-	NSDictionary* savedSettings;
-	if (skipSavedSettings)
-	{
+	if (skipSavedSettings) {
 		[userSettings removeObjectForKey:LogManagerSettingsKey];
-		savedSettings = nil;
 	}
-	else
-	{
-		savedSettings = [userSettings dictionaryForKey:LogManagerSettingsKey];
-	}
-
-	NSMutableDictionary* settings = [[self defaultSettings] mutableCopy];
-	self.settings = settings;
+	
+	self.settings = [self defaultSettings];
 
 	// the showMenu property is read/set here in generic code, but it's up to the
 	// platform specific UI support to interpret it
-	BOOL forceMenu = [userSettings boolForKey:ForceDebugMenuKey];
-	if (forceMenu) {
-	}
-	self.showMenu = (forceMenu || [self.settings[InstallDebugMenuKey] boolValue]);
+	self.showMenu = [userSettings boolForKey:ForceDebugMenuKey];
 }
 
-
-- (NSDictionary*)options
-{
+- (NSDictionary*)options {
 	return self.settings[OptionsKey];
 }
-
-
 
 // --------------------------------------------------------------------------
 //! Revert all channels to default settings.
 // --------------------------------------------------------------------------
 
-- (void)resetAllSettings
-{
+- (void)resetAllSettings {
 	[[NSUserDefaults standardUserDefaults] removeObjectForKey:LogManagerSettingsKey];
 	[self loadSettings];
 }
 
-
-- (BOOL)debugChannelsAreEnabled {
-#if EC_DEBUG
-	return YES;
-#else
-	return NO;
-#endif
-}
-
-- (BOOL)assertionsAreEnabled {
-#if NS_BLOCK_ASSERTIONS
-	return NO;
-#else
-	return YES;
-#endif
-}
-
 - (void)showUI {
-	id<ECLogManagerDelegate> delegate = self.delegate;
-	if ([delegate respondsToSelector:@selector(showUIForLogManager:)]) {
-		[delegate showUIForLogManager:self];
-	 }
+	
 }
 
 @end

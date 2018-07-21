@@ -86,16 +86,6 @@
 }
 
 /// --------------------------------------------------------------------------
-/// Perform some extra Mac-only cleanup.
-/// --------------------------------------------------------------------------
-
-- (void)logManagerWillShutdown:(ECLogManager*)manager
-{
-	[[NSNotificationCenter defaultCenter] removeObserver:self];
-}
-
-
-/// --------------------------------------------------------------------------
 /// Cause a crash.
 /// Useful for testing crash logging etc.
 /// --------------------------------------------------------------------------
