@@ -70,24 +70,6 @@ EC_ASSUME_NONNULL_BEGIN
 
 
 /**
- Has the user suppressed the alert for a given assertion?
- */
-
-- (BOOL)isAssertionSuppressedForKey:(NSString*)key;
-
-/**
- Suppress the alert for a given assertion.
- */
-
-- (void)suppressAssertionForKey:(NSString*)key;
-
-/**
- Remove all assertion suppression settings. All assertions will cause alerts.
- */
-
-- (void)resetAllAssertions;
-
-/**
  Display some UI which allows configuration of the log manager.
  This is implemented by the delegate, and can be an overlay, a separate window, or
  anything else appropriate.

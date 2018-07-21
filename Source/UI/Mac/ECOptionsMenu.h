@@ -10,22 +10,11 @@
 
 /**
  A utility menu which lists configuration options.
- 
  The options to show are read from the ECLogging/ECLoggingDebug.plist file.
-
  The values are read from the NSUserDefaults system.
-
  */
 
 @interface ECOptionsMenu : ECDebugMenu
-
-// --------------------------------------------------------------------------
-// Public Properties
-// --------------------------------------------------------------------------
-
-// --------------------------------------------------------------------------
-// Public Methods
-// --------------------------------------------------------------------------
 
 - (void)setupAsRootMenu;
 
