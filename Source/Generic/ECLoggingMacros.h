@@ -17,14 +17,10 @@
 
 #if EC_DEBUG
 
-#define ECDebugDynamic ECLogDynamic
-#define ECDebugChannelEnabled ECChannelEnabled
 #define ECDebugOptionEnabled(key) ECOptionEnabled(key)
 
 #else
 
-#define ECDebugDynamic(...)
-#define ECDebugChannelEnabled(channel) (false)
 #define ECDebugOptionEnabled(key) NO
 
 #endif
