@@ -5,7 +5,7 @@
 // --------------------------------------------------------------------------
 
 
-@interface RunLoopExample : ECTestCase
+@interface RunLoopExample : BCTestCase
 @end
 
 @implementation RunLoopExample
@@ -27,7 +27,7 @@
 	});
 
 	[self runUntilTimeToExit];
-	ECTestAssertTrue(asyncBlockRan);
+	BCTestAssertTrue(asyncBlockRan);
 }
 
 @end

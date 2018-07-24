@@ -7,4 +7,4 @@
 @import Foundation;
 
 #import "ECIODelegate.h"
-#import "NSString+ECLogging.h"
+#import "ECDummyClass.h"

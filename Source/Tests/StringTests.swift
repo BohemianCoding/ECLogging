@@ -7,7 +7,7 @@ import ECLogging
 import ECUnitTests
 import Foundation
 
-class SwiftStringTests: ECTestCase {
+class SwiftStringTests: BCTestCase {
 
 	func testStringBySplittingMixedCaps() {
 		XCTAssertEqual(("mixedCapTest" as NSString).splittingMixedCaps(), "mixed Cap Test")

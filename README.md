@@ -36,7 +36,7 @@ These were formerly part of the ECConfig and ECUnitTests frameworks, but for the
 
 For more information, see the associated documentation pages:
 
-- Unit Testing Utilities: <ECTestCase>, <ECParameterisedTestCase>
+- Unit Testing Utilities: <BCTestCase>, <ECParameterisedTestCase>
 - [Standard xcconfig Files](<StandardConfigFiles>)
 - [Standard Macros and Definitions](<StandardMacros>)
 - [Standard pch Files](<StandardPrefixFiles>)
