@@ -651,7 +651,7 @@
 						ProvisioningStyle = Manual;
 					};
 					225EC67111EBAA4800A97AEA = {
-						LastSwiftMigration = 1000;
+						LastSwiftMigration = 1020;
 						ProvisioningStyle = Manual;
 					};
 					226889D81AEE4B49005510E5 = {
