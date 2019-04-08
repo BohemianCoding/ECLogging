@@ -39,8 +39,6 @@
 		22B6A245183E0C5400873C05 /* ECTestComparisons.h in Headers */ = {isa = PBXBuildFile; fileRef = 22B6A243183E0C5400873C05 /* ECTestComparisons.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		22B6A247183E0C5400873C05 /* ECTestComparisons.m in Sources */ = {isa = PBXBuildFile; fileRef = 22B6A244183E0C5400873C05 /* ECTestComparisons.m */; };
 		22B6A24C183E0CA800873C05 /* ComparisonTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 22B6A24A183E0CA800873C05 /* ComparisonTests.m */; };
-		22D6EF4C1B0218EA004F9FC7 /* (null) in Resources */ = {isa = PBXBuildFile; };
-		22D6EF4D1B0218EA004F9FC7 /* (null) in Resources */ = {isa = PBXBuildFile; };
 		22D6EF5A1B021952004F9FC7 /* HierarchicalExample.testsuite in Resources */ = {isa = PBXBuildFile; fileRef = 22D6EF571B021952004F9FC7 /* HierarchicalExample.testsuite */; };
 		22D6EF5B1B021952004F9FC7 /* HierarchicalExample.testsuite in Resources */ = {isa = PBXBuildFile; fileRef = 22D6EF571B021952004F9FC7 /* HierarchicalExample.testsuite */; };
 		22D6EF5D1B021952004F9FC7 /* Included.testsuite in Resources */ = {isa = PBXBuildFile; fileRef = 22D6EF581B021952004F9FC7 /* Included.testsuite */; };
@@ -653,7 +651,7 @@
 						ProvisioningStyle = Manual;
 					};
 					225EC67111EBAA4800A97AEA = {
-						LastSwiftMigration = 0900;
+						LastSwiftMigration = 1000;
 						ProvisioningStyle = Manual;
 					};
 					226889D81AEE4B49005510E5 = {
@@ -713,7 +711,6 @@
 				22D6EF5D1B021952004F9FC7 /* Included.testsuite in Resources */,
 				22D6EF5A1B021952004F9FC7 /* HierarchicalExample.testsuite in Resources */,
 				22D6EF601B021952004F9FC7 /* ParameterisedTestsExample.plist in Resources */,
-				22D6EF4C1B0218EA004F9FC7 /* (null) in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -724,7 +721,6 @@
 				22D6EF5E1B021952004F9FC7 /* Included.testsuite in Resources */,
 				22D6EF5B1B021952004F9FC7 /* HierarchicalExample.testsuite in Resources */,
 				22D6EF611B021952004F9FC7 /* ParameterisedTestsExample.plist in Resources */,
-				22D6EF4D1B0218EA004F9FC7 /* (null) in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
