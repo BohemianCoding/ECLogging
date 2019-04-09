@@ -15,6 +15,8 @@ ZTRACE_PATH = $(inherited)_72
 
 ENABLE_NS_ASSERTIONS = YES
 GCC_TREAT_WARNINGS_AS_ERRORS = NO
+ENABLE_TESTABILITY = YES;
+ONLY_ACTIVE_ARCH = YES;
 
 // --------------------------------------------------------------------------
 // Code Generation
