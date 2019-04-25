@@ -192,6 +192,8 @@ verbose "Resigning tools"
 sign_binaries "${CODESIGNING_FOLDER_PATH}/Contents" false
 sign_binaries "${CODESIGNING_FOLDER_PATH}/Contents/Resources" true
 
+# Sign sketchtool in its new location
+codesign --verbose=2 --deep --force --identifier "com.bohemiancoding.sketchtool" $OTHER_CODE_SIGN_FLAGS --sign "Mac Developer:" "${CODESIGNING_FOLDER_PATH}/Contents/MacOS/sketchtool" 
 
 echo ""
 echo "Resigning done."
