@@ -45,6 +45,7 @@
 		22FF8EB716F1E5EB008FC10D /* ECParameterisedTestCase.h in Headers */ = {isa = PBXBuildFile; fileRef = 2277CE4416D6B2B900835964 /* ECParameterisedTestCase.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		22FF8EB816F1E5EB008FC10D /* ECTestCase.h in Headers */ = {isa = PBXBuildFile; fileRef = 2277CE4616D6B2B900835964 /* ECTestCase.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		22FF8EB916F1E5EB008FC10D /* ECUnitTests.h in Headers */ = {isa = PBXBuildFile; fileRef = 2277CE4816D6B2B900835964 /* ECUnitTests.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		4326152E22774EDD0077AE21 /* Chocolat.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4326152D22774EDD0077AE21 /* Chocolat.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -135,6 +136,7 @@
 		22F861261B029BEE00586780 /* ECParameterisedTestSuite.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ECParameterisedTestSuite.m; sourceTree = "<group>"; };
 		22FA575F1AB085E10045A364 /* StringTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = StringTests.m; path = ../../Source/Tests/StringTests.m; sourceTree = "<group>"; };
 		22FF8EC416F1E5EB008FC10D /* ECUnitTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = ECUnitTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		4326152D22774EDD0077AE21 /* Chocolat.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Chocolat.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -158,6 +160,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4326152E22774EDD0077AE21 /* Chocolat.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -183,6 +186,7 @@
 				2274B37714F56679003B8A0B /* Resources */,
 				034768DFFF38A50411DB9C8B /* Products */,
 				22F2FEEC164140E700CD3C7C /* Extras */,
+				4326152C22774EDD0077AE21 /* Frameworks */,
 			);
 			indentWidth = 4;
 			name = ECFoundation;
@@ -454,6 +458,14 @@
 				22F6389E1D11DCB000B36F11 /* TestsShared.xcconfig */,
 			);
 			name = Tests;
+			sourceTree = "<group>";
+		};
+		4326152C22774EDD0077AE21 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				4326152D22774EDD0077AE21 /* Chocolat.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
