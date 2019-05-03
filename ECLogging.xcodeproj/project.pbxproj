@@ -45,6 +45,7 @@
 		22FF8EB716F1E5EB008FC10D /* ECParameterisedTestCase.h in Headers */ = {isa = PBXBuildFile; fileRef = 2277CE4416D6B2B900835964 /* ECParameterisedTestCase.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		22FF8EB816F1E5EB008FC10D /* ECTestCase.h in Headers */ = {isa = PBXBuildFile; fileRef = 2277CE4616D6B2B900835964 /* ECTestCase.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		22FF8EB916F1E5EB008FC10D /* ECUnitTests.h in Headers */ = {isa = PBXBuildFile; fileRef = 2277CE4816D6B2B900835964 /* ECUnitTests.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		43644467227CB5BB0064026E /* Chocolat.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 43644466227CB5BB0064026E /* Chocolat.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -135,6 +136,7 @@
 		22F861261B029BEE00586780 /* ECParameterisedTestSuite.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ECParameterisedTestSuite.m; sourceTree = "<group>"; };
 		22FA575F1AB085E10045A364 /* StringTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = StringTests.m; path = ../../Source/Tests/StringTests.m; sourceTree = "<group>"; };
 		22FF8EC416F1E5EB008FC10D /* ECUnitTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = ECUnitTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		43644466227CB5BB0064026E /* Chocolat.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Chocolat.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -158,6 +160,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				43644467227CB5BB0064026E /* Chocolat.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -460,6 +463,7 @@
 		4326152C22774EDD0077AE21 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				43644466227CB5BB0064026E /* Chocolat.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
