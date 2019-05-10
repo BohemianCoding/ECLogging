@@ -1,6 +1,3 @@
-ZTRACE_ECLOGGINGMACDEBUGFRAMEWORK = 59
-ZTRACE_PATH = $(inherited)_59
-
 // --------------------------------------------------------------------------
 //  Copyright 2017 Elegant Chaos Limited. All rights reserved.
 //  This source code is distributed under the terms of Elegant Chaos's
@@ -8,7 +5,5 @@ ZTRACE_PATH = $(inherited)_59
 // --------------------------------------------------------------------------
 
 /// Standard xcconfig files.
-
-#include "ECMacDebug.xcconfig"
-#include "ECFramework.xcconfig"
-#include "ECLoggingMacSharedFramework.xcconfig"
+#include "ECLoggingMacReleaseFramework.xcconfig"
+#include "../../../BCFoundation/Configs/BCCoreDebug.xcconfig"
