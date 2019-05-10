@@ -438,17 +438,17 @@
 					2251B9FE15DBCC3E00F2FE40 = {
 						DevelopmentTeam = WUGMZZ5K46;
 						LastSwiftMigration = 0900;
-						ProvisioningStyle = Automatic;
+						ProvisioningStyle = Manual;
 					};
 					225EC67111EBAA4800A97AEA = {
 						DevelopmentTeam = WUGMZZ5K46;
 						LastSwiftMigration = 1020;
-						ProvisioningStyle = Automatic;
+						ProvisioningStyle = Manual;
 					};
 					22FF8E8516F1E5EB008FC10D = {
 						DevelopmentTeam = WUGMZZ5K46;
 						LastSwiftMigration = 0900;
-						ProvisioningStyle = Automatic;
+						ProvisioningStyle = Manual;
 					};
 				};
 			};
@@ -567,10 +567,6 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 2251BA4515DBCD3900F2FE40 /* ECLoggingMacDebugFramework.xcconfig */;
 			buildSettings = {
-				CODE_SIGN_IDENTITY = "Mac Developer";
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = "";
-				PROVISIONING_PROFILE_SPECIFIER = "";
 			};
 			name = Debug;
 		};
@@ -578,10 +574,6 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 2251BA4615DBCD3900F2FE40 /* ECLoggingMacReleaseFramework.xcconfig */;
 			buildSettings = {
-				CODE_SIGN_IDENTITY = "Mac Developer";
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = "";
-				PROVISIONING_PROFILE_SPECIFIER = "";
 			};
 			name = Release;
 		};
@@ -589,10 +581,6 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 2251BA5E15DBD68500F2FE40 /* MacTestsDebug.xcconfig */;
 			buildSettings = {
-				CODE_SIGN_IDENTITY = "Mac Developer";
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = "";
-				PROVISIONING_PROFILE_SPECIFIER = "";
 			};
 			name = Debug;
 		};
@@ -600,10 +588,6 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 2251BA5F15DBD68500F2FE40 /* MacTestsRelease.xcconfig */;
 			buildSettings = {
-				CODE_SIGN_IDENTITY = "Mac Developer";
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = "";
-				PROVISIONING_PROFILE_SPECIFIER = "";
 			};
 			name = Release;
 		};
@@ -623,10 +607,6 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 43D63CD92284E0DF00CFBF01 /* ECUnitTestsMacDebug.xcconfig */;
 			buildSettings = {
-				CODE_SIGN_IDENTITY = "Mac Developer";
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = "";
-				PROVISIONING_PROFILE_SPECIFIER = "";
 			};
 			name = Debug;
 		};
@@ -634,10 +614,6 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 43D63CDA2284E0DF00CFBF01 /* ECUnitTestsMacRelease.xcconfig */;
 			buildSettings = {
-				CODE_SIGN_IDENTITY = "Mac Developer";
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = "";
-				PROVISIONING_PROFILE_SPECIFIER = "";
 			};
 			name = Release;
 		};
