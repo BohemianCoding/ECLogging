@@ -1,13 +1,3 @@
-ZTRACE_MACTESTSDEBUG = 75
-ZTRACE_PATH = $(inherited)_75
+#include "MacTestsRelease.xcconfig"
+#include "../../../BCFoundation/Configs/BCCoreDebug.xcconfig"
 
-// --------------------------------------------------------------------------
-//  Copyright 2017 Elegant Chaos Limited. All rights reserved.
-//  This source code is distributed under the terms of Elegant Chaos's
-//  liberal license: http://www.elegantchaos.com/license/liberal
-// --------------------------------------------------------------------------
-
-/// Standard xcconfig files.
-
-#include "ECMacDebug.xcconfig"
-#include "MacTestsShared.xcconfig"
