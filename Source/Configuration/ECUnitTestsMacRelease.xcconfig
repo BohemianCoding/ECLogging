@@ -1,14 +1,14 @@
-ZTRACE_ECUNITTESTSMACRELEASE = 53
-ZTRACE_PATH = $(inherited)_53
+#include "../../../BCFoundation/Configs/BCCore.xcconfig"
+#include "../../../BCFoundation/Configs/BCFramework.xcconfig"
 
-// --------------------------------------------------------------------------
-//  Copyright 2017 Elegant Chaos Limited. All rights reserved.
-//  This source code is distributed under the terms of Elegant Chaos's
-//  liberal license: http://www.elegantchaos.com/license/liberal
-// --------------------------------------------------------------------------
+PRODUCT_BUNDLE_IDENTIFIER = com.elegantchaos.frameworks.eclogging.tests
+PRODUCT_NAME = ECUnitTests
 
-/// Standard xcconfig files.
+INFOPLIST_FILE = Resources/Info.plist
+FRAMEWORK_SEARCH_PATHS = $(inherited) $(PLATFORM_DIR)/Developer/Library/Frameworks
 
-#include "ECMacRelease.xcconfig"
-#include "ECFramework.xcconfig"
-#include "ECUnitTestsMacShared.xcconfig"
+GCC_WARN_UNUSED_PARAMETER = NO
+GCC_WARN_ABOUT_DEPRECATED_FUNCTIONS = NO
+CLANG_WARN_IMPLICIT_SIGN_CONVERSION = NO
+GCC_WARN_ABOUT_MISSING_PROTOTYPES = NO
+GCC_WARN_SIGN_COMPARE = NO
