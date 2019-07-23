@@ -12,7 +12,6 @@
 #import "ECTestCase.h"
 #import "ECParameterisedTestCase.h"
 #import "ECTestComparisons.h"
-#import "NSString+ECLogging.h"
 
 
 @interface ECTestCase ()
