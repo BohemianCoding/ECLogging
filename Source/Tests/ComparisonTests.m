@@ -1,6 +1,5 @@
 //
 //  ComparisonTests.m
-//  ECLogging
 //
 //  Created by Sam Deane on 21/11/2013.
 //  Copyright (c) 2015 Sam Deane, Elegant Chaos. All rights reserved.
