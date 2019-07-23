@@ -20,7 +20,6 @@
 /* End PBXAggregateTarget section */
 
 /* Begin PBXBuildFile section */
-		038F13BA1F98B46E000E8967 /* ECIODelegate.h in Headers */ = {isa = PBXBuildFile; fileRef = 038F13B91F98B46E000E8967 /* ECIODelegate.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		220D699D15DC510900CCC17C /* ECLogging.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 2251B9FF15DBCC3E00F2FE40 /* ECLogging.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
 		2221874B19DABA6000F08CCE /* ECLogging.h in Headers */ = {isa = PBXBuildFile; fileRef = 2221873019DAB73300F08CCE /* ECLogging.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		2221875219DABA6000F08CCE /* NSString+ECLogging.h in Headers */ = {isa = PBXBuildFile; fileRef = 2283A4D214F53D31009142F7 /* NSString+ECLogging.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -73,7 +72,6 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		038F13B91F98B46E000E8967 /* ECIODelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ECIODelegate.h; sourceTree = "<group>"; };
 		2221873019DAB73300F08CCE /* ECLogging.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ECLogging.h; sourceTree = "<group>"; };
 		22381E161A6C35BF000AD60A /* ECLogging.modulemap */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.module-map"; path = ECLogging.modulemap; sourceTree = "<group>"; };
 		2251B9FF15DBCC3E00F2FE40 /* ECLogging.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = ECLogging.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -258,7 +256,6 @@
 			isa = PBXGroup;
 			children = (
 				2221873019DAB73300F08CCE /* ECLogging.h */,
-				038F13B91F98B46E000E8967 /* ECIODelegate.h */,
 				2277CE4F16D6B2C000835964 /* Testing */,
 				2277CE4216D6B2A500835964 /* Logging */,
 			);
@@ -349,7 +346,6 @@
 			files = (
 				2221875219DABA6000F08CCE /* NSString+ECLogging.h in Headers */,
 				2221874B19DABA6000F08CCE /* ECLogging.h in Headers */,
-				038F13BA1F98B46E000E8967 /* ECIODelegate.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
