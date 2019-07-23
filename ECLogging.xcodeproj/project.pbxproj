@@ -19,7 +19,7 @@
 		22FF8EB816F1E5EB008FC10D /* ECTestCase.h in Headers */ = {isa = PBXBuildFile; fileRef = 2277CE4616D6B2B900835964 /* ECTestCase.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		22FF8EB916F1E5EB008FC10D /* ECUnitTests.h in Headers */ = {isa = PBXBuildFile; fileRef = 2277CE4816D6B2B900835964 /* ECUnitTests.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		43644467227CB5BB0064026E /* Chocolat.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 43644466227CB5BB0064026E /* Chocolat.framework */; };
-		43746BF922E6F280006AFE2C /* ForceSwift.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43746BF822E6F280006AFE2C /* ForceSwift.swift */; };
+		43746BFA22E6FD95006AFE2C /* Chocolat.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 43644466227CB5BB0064026E /* Chocolat.framework */; };
 		43D63CDD2284E44200CFBF01 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 43D63CDC2284E44100CFBF01 /* XCTest.framework */; };
 /* End PBXBuildFile section */
 
@@ -63,7 +63,6 @@
 		22F861261B029BEE00586780 /* ECParameterisedTestSuite.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ECParameterisedTestSuite.m; sourceTree = "<group>"; };
 		22FF8EC416F1E5EB008FC10D /* ECUnitTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = ECUnitTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		43644466227CB5BB0064026E /* Chocolat.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Chocolat.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		43746BF822E6F280006AFE2C /* ForceSwift.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ForceSwift.swift; path = Source/Tests/ForceSwift.swift; sourceTree = SOURCE_ROOT; };
 		43D63CD92284E0DF00CFBF01 /* ECUnitTestsMacDebug.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = ECUnitTestsMacDebug.xcconfig; sourceTree = "<group>"; };
 		43D63CDA2284E0DF00CFBF01 /* ECUnitTestsMacRelease.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = ECUnitTestsMacRelease.xcconfig; sourceTree = "<group>"; };
 		43D63CDC2284E44100CFBF01 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Platforms/MacOSX.platform/Developer/Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
@@ -74,6 +73,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				43746BFA22E6FD95006AFE2C /* Chocolat.framework in Frameworks */,
 				229C9E0A16F9085B00FD7AAE /* ECUnitTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -235,7 +235,6 @@
 			isa = PBXGroup;
 			children = (
 				22B6A24A183E0CA800873C05 /* ComparisonTests.m */,
-				43746BF822E6F280006AFE2C /* ForceSwift.swift */,
 				22E817911D14825600DD8803 /* ECLoggingTests-Bridging-Header.h */,
 				22D6EF671B02198A004F9FC7 /* Resources */,
 			);
@@ -379,7 +378,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				22B6A24C183E0CA800873C05 /* ComparisonTests.m in Sources */,
-				43746BF922E6F280006AFE2C /* ForceSwift.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
